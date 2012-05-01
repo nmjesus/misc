@@ -29,15 +29,16 @@ resizer() {
     do
         FILENAME=${FILE%%.*}
         EXTENSION=${FILE##*.}
+        EXTENSION_TO_SAVE=$(echo $EXTENSION | tr '[A-Z]' '[a-z]')
         SOURCE=$PATHPHOTOS/$FILENAME.$EXTENSION
-        RESIZE_DESTINY=$PATHPHOTOS/$THUMBS/$FILENAME.$EXTENSION
+        RESIZE_DESTINY=$PATHPHOTOS/$THUMBS/$FILENAME.$EXTENSION_TO_SAVE
 
         #Resize to 800
         convert $SOURCE -resize 800 $RESIZE_DESTINY
 
         #TODO LIST AND FOR
-        CROP_DESTINY1="$PATHPHOTOS/$THUMBS/th1_resize_$FILENAME.$EXTENSION"
-        CROP_DESTINY2="$PATHPHOTOS/$THUMBS/th2_resize_$FILENAME.$EXTENSION"
+        CROP_DESTINY1="$PATHPHOTOS/$THUMBS/th1_resize_$FILENAME.$EXTENSION_TO_SAVE"
+        CROP_DESTINY2="$PATHPHOTOS/$THUMBS/th2_resize_$FILENAME.$EXTENSION_TO_SAVE"
 
         #Crop the resized photos
         convert -define jpeg:size=200x165 $RESIZE_DESTINY -thumbnail '200x165>' -gravity center  -crop 200x165+0+0\! -background white -flatten $CROP_DESTINY1
