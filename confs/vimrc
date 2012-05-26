@@ -1,0 +1,41 @@
+set nu
+set backspace=2
+set cmdheight=2
+set nocompatible	
+set cpoptions=ces$
+set formatoptions=tcrql
+set ignorecase
+set smartcase
+set magic
+set showmatch
+set showmode
+set wildmode=longest,list,full
+set wrapmargin=4
+set wrapscan
+set expandtab
+set undolevels=500
+set ai
+set viminfo='20,\"50
+set history=50
+set ruler
+set tabstop=4
+set shiftwidth=4
+set incsearch
+set nocp
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set hardtabs=4 report=2 redraw magic autowrite 
+
+set fdm=marker 
+if (&term =~ "xterm") && (&termencoding == "")
+    set termencoding=utf-8
+endif
+
+set hlsearch
+set background=light
+syntax on
+
+nmap    <ESC>[5^    <C-PageUp>
+nmap    <ESC>[6^    <C-PageDown>
+nnoremap <C-PageDown> :tabnext<CR>
+nnoremap <C-PageUp> :tabprev<CR>

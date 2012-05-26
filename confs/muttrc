@@ -1,0 +1,143 @@
+#cortesy of several folks around the web. Thanks
+
+set folder      = imaps://imap.gmail.com/
+set imap_user   = ****@gmail.com
+set imap_pass   = **** 
+set spoolfile   = +INBOX
+set imap_check_subscribed
+set header_cache = ~/.mutt/hcache
+set postponed = +[Gmail]/Drafts
+unset imap_passive
+set imap_keepalive = 300
+set mail_check = 120
+set my_pass='*****'
+set my_user=****@gmail.com
+set smtp_url=smtps://$my_user:$my_pass@smtp.gmail.com
+set ssl_force_tls = yes
+
+
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+
+set realname="Nuno Jesus"
+
+set send_charset="UTF-8"
+set charset="UTF-8"
+
+auto_view application/zip
+auto_view application/x-gzip
+auto_view application/x-gunzip
+auto_view application/octet-stream
+auto_view application/x-zip-compressed
+auto_view application/x-tar-gz
+auto_view application/msword
+auto_view application/x-perl
+auto_view application/x-sh
+auto_view application/x-tcl
+auto_view application/RTF
+auto_view text/html
+auto_view text/x-vcard
+auto_view image/tiff
+
+
+alternative_order text/enriched text/plain text
+
+unignore *
+ignore Received:
+ignore "From "
+ignore Return-Path:
+ignore X-Delivery-Time:
+ignore X-Envelope-To:
+ignore X-Envelope-From:
+ignore References:
+ignore In-Reply-To:
+ignore Return-Path:
+ignore Mime-Version:
+ignore Status:
+ignore X-Status:
+ignore Content-Length:
+ignore Lines:
+ignore Content-Type:
+ignore X-Priority:
+ignore X-MSMail-Priority:
+ignore X-MimeOLE:
+ignore Approved-By:
+ignore X-Flags:
+ignore List-Id:
+ignore X-BeenThere:
+ignore X-Mailman-Version:
+ignore Content-Type-Encoding:
+ignore Content-Transfer-Encoding:
+ignore Errors-To:
+ignore list-help:
+ignore list-unsubscribe:
+ignore list-post:
+ignore Mailing-List:
+ignore X-No-Archive:
+ignore Importance:
+ignore X-Spam-Rating:
+ignore X-Loop:
+ignore X-Accept-Language:
+ignore X-List:
+ignore X-list-Unsubscribe:
+ignore X-Unsub:
+ignore Path:
+ignore X-Trace:
+ignore NNTP-Posting-Host:
+ignore NNTP-Posting-Date:
+ignore Xref:
+ignore X-Received:
+
+unhdr_order *
+hdr_order From: Subject: To: Date: Message-ID: CC: Date: Organization: X-Mailer: User-Agent:
+
+
+color	hdrdefault	black		cyan
+color	quoted		brightred	black
+color	signature	magenta		black
+color	indicator	brightwhite	red
+color	attachment	black		green
+color	error		red		black
+color	message		white		black
+color	search		brightwhite	magenta
+color	status		brightyellow	blue
+color	tree		red		black
+color	normal		white		black
+color	tilde		green		black
+color	bold		brightyellow	black
+color	markers		red		black
+
+mono bold      bold
+mono underline underline
+mono indicator reverse
+
+color header black cyan ".*:"
+color header brightwhite cyan "^(From|Subject):"
+mono  header bold             "^(From|Subject):"
+
+color index brightblue  black ~N
+color index red         black ~F
+color index black       green ~T
+color index brightwhite black ~D
+mono  index bold              ~N
+mono  index bold              ~F
+mono  index bold              ~T
+mono  index bold              ~D
+
+color body brightblue  black "(svn|http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body brightblue  black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono  body bold              "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+mono  body bold              "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+color body brightblue  black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+mono  body bold              "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+color body brightgreen black "<[Ee]?[Bb]?[Gg]>"		# <g>
+color body brightgreen black "<[Bb][Gg]>"		# <bg>
+color body brightgreen black " [;:]-*[)>(<|]"		# :-) etc...
+
+push V
+
+set editor="vim"
+
+bind index \Cr imap-fetch-mail

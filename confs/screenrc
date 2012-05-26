@@ -1,0 +1,18 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+defscrollback 5000
+startup_message off
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+autodetach on
+vbell off
+altscreen on
+screen -t IRC       1 irssi -c Freenode
+screen -t IM        2 irssi -c localhost
+screen -t Mutt      3 mutt 
+screen -t ncmp      4 ncmpcpp 
+screen -t rtorrent  5 rtorrent
+screen -t Bash      6 bash 
+screen -t Bash      7 bash 
+screen -t Bash      8 bash 

@@ -1,0 +1,47 @@
+!misc
+urxvt*loginShell:       true
+urxvt*transparent:      true
+urxvt*shading:          10
+urxvt*background:       Black
+urxvt*foreground:       Green
+urxvt*scrollBar:        no
+urxvt*scrollBar_right:  no
+urxvt*transpscrollbar:  true
+urxvt*saveLines:        32767
+urxvt*visualBell:       false 
+
+!font
+urxvt*font:             -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1
+urxvt*fontBold:         -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
+
+!colors
+urxvt*depth:            32
+urxvt*color0:           #000000
+urxvt*color1:           #9e1828
+urxvt*color2:           #aece92
+urxvt*color3:           #968a38
+urxvt*color4:           #414171
+urxvt*color5:           #963c59
+urxvt*color6:           #418179
+urxvt*color7:           #bebebe
+urxvt*color8:           #666666
+urxvt*color9:           #cf6171
+urxvt*color10:          #c5f779
+urxvt*color11:          #fff796
+urxvt*color12:          #4186be
+urxvt*color13:          #cf9ebe
+urxvt*color14:          #71bebe
+urxvt*color15:          #ffffff
+
+!tabs
+urxvt.perl-ext-common:  default,tabbed
+urxvt.tabbed.tabbar-fg: 2
+urxvt.tabbed.tabbar-bg: 0
+urxvt.tabbed.tab-fg:    3
+urxvt.tabbed.tab-bg:    0
+
+
+urxvt.keysym.Control-Up:        \033[1;5A
+urxvt.keysym.Control-Down:      \033[1;5B
+urxvt.keysym.Control-Left:      \033[1;5D
+urxvt.keysym.Control-Right:     \033[1;5C
